@@ -19,8 +19,9 @@
             height: 37vh;
             background-color: red;
             background-image: url(https://media.licdn.com/media/AAEAAQAAAAAAAAiGAAAAJGM1YmNhZWNjLTExMWEtNDJhZi1iM2JhLTU4NzczZDRlNGM2OA.jpg);
-            background-size: cover;
+
             background-attachment: fixed;
+            background-position: center 0px;
         }
         .mask {
             width: 100%;
@@ -200,6 +201,7 @@
     <p>&copy; Marjo Ballabani</p>
     <p>Working with <span class="love">❤</span></p>
 </footer>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script src="https://marjoballabani.github.io/ballabani.me/assets/js/sweet-scroll.min.js"></script>
 <script src="https://marjoballabani.github.io/ballabani.me/assets/js/main.js"></script>
@@ -207,6 +209,16 @@
 <!-- Google Analytics -->
 
 <script>
+    $( document ).ready(function() {
+        $(window).scroll(function () {
+            var wScroll = $(this).scrollTop();
+
+            if (wScroll > $(".with-back").offset().top - $(window).height()) {
+                $(".with-back").css({'background-position': 'center ' + ((wScroll - $(".with-back").offset().top)/10.5) + 'px'})
+            }
+        });
+    });
+
     new WOW().init();
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
