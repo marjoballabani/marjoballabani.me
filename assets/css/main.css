@@ -296,3 +296,8 @@ body {
     background: linear-gradient(177deg, #ffffff 50%, #efefef 50%);
     margin-bottom: -20px;
 }
+.exp-sect-bot-art {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(177deg, #efeff0 50%, #ffffff 50%);
+}
