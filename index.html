@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marjo Ballabani | Terminal Resume</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <div class="terminal">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="close"></span>
+                    <span class="minimize"></span>
+                    <span class="maximize"></span>
+                </div>
+                <div class="terminal-title">marjo@ballabani: ~/resume</div>
+            </div>
+            <div class="terminal-container">
+                <div class="terminal-content">
+                    <div id="output"></div>
+                    <div class="input-line">
+                        <span class="prompt">➜</span>
+                        <input type="text" id="command-input" autofocus />
+                    </div>
+                </div>
+            </div>
+            <div class="context-menu">
+                <div class="menu-item" data-action="split-h">Split Horizontally</div>
+                <div class="menu-item" data-action="split-v">Split Vertically</div>
+                <div class="menu-item" data-action="close-split">Close Split</div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+
+</html>
