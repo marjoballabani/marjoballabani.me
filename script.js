@@ -418,24 +418,24 @@ class TerminalResume {
   }
 
   printWelcomeMessage(outputElement = this.output) {
-    const asciiArt = `███╗   ███╗ █████╗ ██████╗      ██╗ ██████╗
-████╗ ████║██╔══██╗██╔══██╗     ██║██╔═══██╗
-██╔████╔██║███████║██████╔╝     ██║██║   ██║
-██║╚██╔╝██║██╔══██║██╔══██╗██   ██║██║   ██║
-██║ ╚═╝ ██║██║  ██║██║  ██║╚█████╔╝╚██████╔╝
-╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚════╝  ╚═════╝ `;
+    const asciiArt = `███╗   ███╗ █████╗ ██████╗ ██╗ ██████╗
+████╗ ████║██╔══██╗██╔══██╗██║██╔═══██╗
+██╔████╔██║███████║██████╔╝██║██║   ██║
+██║╚██╔╝██║██╔══██║██╔══██╗██║██║   ██║
+██║ ╚═╝ ██║██║  ██║██║  ██║██║╚██████╔╝
+╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝ ╚═════╝ `;
 
-    const divider = "─".repeat(56);
+    const divider = "─────────────────────────────────────────────────";
 
     const welcome =
       this.wrapWithColor(asciiArt + "\n", "#d4843e") +
       this.wrapWithColor(divider + "\n", "#555555") +
       this.wrapWithColor(
-        "                Interactive Terminal Resume\n",
+        "              Interactive Terminal Resume\n",
         "#888888"
       ) +
       this.wrapWithColor(
-        "          Software Engineer • Cloud Architect • Tech Lead\n",
+        "         Software Engineer • Cloud Architect • Tech Lead\n",
         "#666666"
       ) +
       this.wrapWithColor(divider + "\n\n", "#555555") +
