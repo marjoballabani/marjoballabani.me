@@ -6,6 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Marjo Ballabani | Terminal Resume</title>
         <link rel="stylesheet" href="styles.css">
+        <!-- FontAwesome for icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Add Google Fonts for better typography -->
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- p5.js for Snake game -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.min.js"></script>
     </head>
 
     <body>
@@ -17,6 +23,14 @@
                     <span class="maximize"></span>
                 </div>
                 <div class="terminal-title">marjo@ballabani: ~/resume</div>
+                <div class="terminal-controls">
+                    <div class="theme-selector">
+                        <i class="fa-solid fa-palette" id="theme-toggle"></i>
+                    </div>
+                    <div class="language-selector">
+                        <i class="fa-solid fa-globe" id="language-toggle"></i>
+                    </div>
+                </div>
             </div>
             <div class="terminal-container">
                 <div class="terminal-content">
@@ -33,6 +47,69 @@
                 <div class="menu-item" data-action="close-split">Close Split</div>
             </div>
         </div>
+
+        <!-- Theme Selection Modal -->
+        <div id="theme-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Select Theme</h2>
+                <div class="theme-options">
+                    <div class="theme-option" data-theme="default">
+                        <div class="theme-preview default-theme"></div>
+                        <span>Default</span>
+                    </div>
+                    <div class="theme-option" data-theme="dracula">
+                        <div class="theme-preview dracula-theme"></div>
+                        <span>Dracula</span>
+                    </div>
+                    <div class="theme-option" data-theme="solarized">
+                        <div class="theme-preview solarized-theme"></div>
+                        <span>Solarized</span>
+                    </div>
+                    <div class="theme-option" data-theme="nord">
+                        <div class="theme-preview nord-theme"></div>
+                        <span>Nord</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Language Selection Modal -->
+        <div id="language-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Select Language</h2>
+                <div class="language-options">
+                    <div class="language-option" data-lang="en">English</div>
+                    <div class="language-option" data-lang="de">Deutsch</div>
+                    <div class="language-option" data-lang="fr">Français</div>
+                    <div class="language-option" data-lang="sq">Albanian</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Showcase Modal -->
+        <div id="projects-modal" class="modal">
+            <div class="modal-content projects-modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Projects</h2>
+                <div class="projects-container">
+                    <!-- Project cards will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Visualization Modal -->
+        <div id="skills-modal" class="modal">
+            <div class="modal-content skills-modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Skills Visualization</h2>
+                <div class="skills-container">
+                    <!-- Skills visualization will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+
         <script src="script.js"></script>
     </body>
 
