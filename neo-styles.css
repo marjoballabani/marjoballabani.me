@@ -551,6 +551,10 @@ body[data-theme="dark"] .timeline-marker {
   background: var(--secondary);
 }
 
+body[data-theme="dark"] .timeline-header {
+  background: var(--white);
+}
+
 body[data-theme="dark"] .badge {
   background: var(--secondary);
   color: var(--bg);
@@ -1293,6 +1297,12 @@ body[data-theme="dark"] .stat-number {
     height: 400px;
   }
 
+  .timeline-header {
+    margin: -1rem -1rem 1rem -1rem;
+    padding: 1rem 1rem 0.75rem 1rem;
+    top: -1px;
+  }
+
   .journey-map-container {
     min-height: 400px;
     box-shadow: 3px 3px 0 var(--border);
@@ -1549,9 +1559,13 @@ body[data-theme="dark"] .stat-number {
 .timeline-header {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 1.5rem;
-  padding-bottom: 1rem;
+  margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
   border-bottom: var(--border-width) solid var(--border);
+  position: sticky;
+  top: -25px;
+  background: var(--white);
+  z-index: 10;
 }
 
 .timeline-list {
