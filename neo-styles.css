@@ -1359,23 +1359,6 @@ body[data-theme="dark"] .stat-number {
   .contact-card span {
     font-size: 0.85rem;
   }
-
-  .education-languages-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .language-item {
-    padding: 0.6rem 0.9rem;
-  }
-
-  .language-name-inline {
-    font-size: 0.9rem;
-  }
-
-  .language-stars {
-    font-size: 0.85rem;
-  }
 }
 
 .container {
@@ -2814,5 +2797,53 @@ body[data-theme="dark"] .language-item:hover {
     width: 50px;
     height: 50px;
     font-size: 1.25rem;
+  }
+
+  .education-title {
+    font-size: 1.2rem;
+  }
+
+  .education-school {
+    font-size: 1rem;
+  }
+
+  .education-location {
+    font-size: 0.9rem;
+  }
+
+  .education-card,
+  .languages-card {
+    padding: 1.25rem;
+  }
+
+  .language-item {
+    padding: 0.65rem 0.85rem;
+  }
+
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .badge {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .education-languages-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+
+  .language-item {
+    padding: 0.6rem 0.9rem;
+  }
+
+  .language-name-inline {
+    font-size: 0.9rem;
+  }
+
+  .language-stars {
+    font-size: 0.85rem;
   }
 }
