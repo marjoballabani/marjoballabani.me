@@ -9,231 +9,187 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-        <i class="fas fa-moon"></i>
-    </button>
-
-    <button id="toc-toggle" class="toc-toggle" aria-label="Toggle table of contents">
-        <i class="fas fa-bars"></i>
-    </button>
-
-    <nav id="table-of-contents" class="toc">
-        <div class="toc-header">
-            <h3>OUTLINE</h3>
-            <button id="toc-close" class="toc-close" aria-label="Close outline">
-                <i class="fas fa-times"></i>
-            </button>
+    <div class="page-wrapper">
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="#" class="nav-brand">MB</a>
+            <div class="nav-right">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#experience" class="nav-link">Journey</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-cta">Get in Touch!</a>
+                <button id="theme-toggle" class="theme-toggle-nav" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
-        <ul class="toc-tree">
-            <li class="toc-tree-item">
-                <div class="toc-tree-toggle" data-target="about-section">
-                    <i class="fas fa-chevron-right toc-chevron"></i>
-                    <a href="#about" class="toc-tree-link">About</a>
-                </div>
-            </li>
-            <li class="toc-tree-item">
-                <div class="toc-tree-toggle" data-target="experience-section">
-                    <i class="fas fa-chevron-right toc-chevron"></i>
-                    <a href="#experience" class="toc-tree-link">Experience</a>
-                </div>
-                <ul class="toc-tree-nested" id="experience-section">
-                    <li class="toc-tree-item-nested">
-                        <a href="#exp-1" class="toc-tree-link-nested">Prophet Global</a>
-                    </li>
-                    <li class="toc-tree-item-nested">
-                        <a href="#exp-2" class="toc-tree-link-nested">Ritech Solutions</a>
-                    </li>
-                    <li class="toc-tree-item-nested">
-                        <a href="#exp-3" class="toc-tree-link-nested">Gutenberg Technology</a>
-                    </li>
-                    <li class="toc-tree-item-nested">
-                        <a href="#exp-4" class="toc-tree-link-nested">Group of Companies</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="toc-tree-item">
-                <div class="toc-tree-toggle" data-target="skills-section">
-                    <i class="fas fa-chevron-right toc-chevron"></i>
-                    <a href="#skills" class="toc-tree-link">Skills</a>
-                </div>
-                <ul class="toc-tree-nested" id="skills-section">
-                    <li class="toc-tree-item-nested">
-                        <a href="#skills" class="toc-tree-link-nested">Frontend</a>
-                    </li>
-                    <li class="toc-tree-item-nested">
-                        <a href="#skills" class="toc-tree-link-nested">Languages</a>
-                    </li>
-                    <li class="toc-tree-item-nested">
-                        <a href="#skills" class="toc-tree-link-nested">Backend</a>
-                    </li>
-                    <li class="toc-tree-item-nested">
-                        <a href="#skills" class="toc-tree-link-nested">Cloud & DevOps</a>
-                    </li>
-                    <li class="toc-tree-item-nested">
-                        <a href="#skills" class="toc-tree-link-nested">Databases</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="toc-tree-item">
-                <div class="toc-tree-toggle" data-target="education-section">
-                    <i class="fas fa-chevron-right toc-chevron"></i>
-                    <a href="#education" class="toc-tree-link">Education</a>
-                </div>
-            </li>
-            <li class="toc-tree-item">
-                <div class="toc-tree-toggle" data-target="languages-section">
-                    <i class="fas fa-chevron-right toc-chevron"></i>
-                    <a href="#languages" class="toc-tree-link">Languages</a>
-                </div>
-            </li>
-        </ul>
     </nav>
 
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <p class="hero-greeting" id="hero-greeting">Hi there! 👋</p>
+                <h1 class="hero-name">I'm Marjo Ballabani.</h1>
+                <p class="hero-description">
+                    Based in Munich, Germany, I'm a Senior Software Engineer. I love to work with distributed systems, data pipelines, and cloud technologies. I'm passionate about microservices, full-stack development, and building cool stuff.
+                </p>
+                <div class="hero-social">
+                    <a href="https://github.com/marjoballabani" target="_blank" class="social-btn">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/marjo-ballabani/" target="_blank" class="social-btn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://stackoverflow.com/users/7563517/marjo-ballabani" target="_blank" class="social-btn">
+                        <i class="fab fa-stack-overflow"></i>
+                    </a>
+                </div>
+                <a href="#contact" class="btn-cta">Get in Touch!</a>
+            </div>
+            <div class="hero-right">
+                <div class="hero-image-wrapper">
+                    <div class="tape-sticker"></div>
+                    <img src="image/avatar-gpt.png" alt="Marjo Ballabani" class="hero-photo">
+                    <div class="deco-code">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="6" width="88" height="88" rx="8" fill="#66d9ef" stroke="#000" stroke-width="4"/>
+                            <rect x="3" y="3" width="88" height="88" rx="8" fill="#66d9ef" stroke="#000" stroke-width="4"/>
+                            <path d="M35 40 L20 50 L35 60" stroke="#000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M65 40 L80 50 L65 60" stroke="#000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="55" y1="35" x2="45" y2="65" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="deco-terminal">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="6" width="88" height="88" rx="8" fill="#ffd93d" stroke="#000" stroke-width="4"/>
+                            <rect x="3" y="3" width="88" height="88" rx="8" fill="#ffd93d" stroke="#000" stroke-width="4"/>
+                            <path d="M25 35 L40 50 L25 65" stroke="#000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <line x1="50" y1="65" x2="75" y2="65" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="deco-floppy">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="6" width="88" height="88" rx="8" fill="#a8e6cf" stroke="#000" stroke-width="4"/>
+                            <rect x="3" y="3" width="88" height="88" rx="8" fill="#a8e6cf" stroke="#000" stroke-width="4"/>
+                            <rect x="20" y="20" width="60" height="60" rx="3" fill="#ffd93d" stroke="#000" stroke-width="4"/>
+                            <rect x="30" y="20" width="40" height="20" fill="#66d9ef" stroke="#000" stroke-width="3"/>
+                            <rect x="35" y="55" width="30" height="15" rx="2" fill="#000"/>
+                            <circle cx="50" cy="35" r="3" fill="#000"/>
+                        </svg>
+                    </div>
+                    <div class="deco-label">Full-Stack Ninja</div>
+                </div>
+            </div>
+        </div>
+        <div class="tech-badges">
+            <span class="tech-badge"><i class="fab fa-node-js"></i> Node.js</span>
+            <span class="tech-badge"><i class="fab fa-react"></i> React</span>
+            <span class="tech-badge"><i class="fab fa-python"></i> Python</span>
+            <span class="tech-badge"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="tech-badge"><i class="fab fa-html5"></i> HTML</span>
+            <span class="tech-badge"><i class="fab fa-css3"></i> TypeScript</span>
+            <span class="tech-badge"><i class="fab fa-google"></i> Google Cloud</span>
+            <span class="tech-badge"><i class="fab fa-docker"></i> Docker</span>
+        </div>
+    </section>
+
     <div class="container">
-        <header class="header">
-            <img src="image/avatar-gpt.png" alt="Marjo Ballabani" class="avatar">
-            <div class="header-content">
-                <h1 class="name">MARJO BALLABANI</h1>
-                <p class="tagline">Senior Software Engineer</p>
-                <p class="location"><i class="fas fa-map-marker-alt"></i> Munich, Germany</p>
-            </div>
-            <div class="header-actions">
-                <a href="index.html" class="btn btn-terminal">
-                    <i class="fas fa-terminal"></i> Terminal
-                </a>
-                <a href="mailto:marjoballabani@gmail.com" class="btn btn-primary">
-                    <i class="fas fa-envelope"></i> Contact
-                </a>
-                <a href="/Users/mballabani/Downloads/CV - MARJO BALLABANI - MUNICH.pdf" class="btn btn-secondary" download>
-                    <i class="fas fa-download"></i> CV
-                </a>
-            </div>
-        </header>
 
         <section class="section" id="about">
             <h2 class="section-title">ABOUT</h2>
             <div class="card">
                 <p class="text">
-                    Highly experienced and dynamic software engineer with a rich professional background spanning over 11 years.
-                    Throughout my career, I've held positions in renowned tech companies across Albania, France, USA, and Germany.
-                    My contributions have been pivotal in designing and constructing microservices for distributed systems,
-                    implementing data pipelines on Google Cloud, and engaging in full-stack development.
+                    Highly experienced and dynamic software engineer with a rich professional background spanning over <span class="highlight highlight-yellow">11 years</span>.
+                    Throughout my career, I've held positions in renowned tech companies across <span class="highlight highlight-pink">Albania, France, USA, and Germany</span>.
+                    My contributions have been pivotal in designing and constructing <span class="highlight highlight-cyan">microservices for distributed systems</span>,
+                    implementing <span class="highlight highlight-green">data pipelines on Google Cloud</span>, and engaging in <span class="highlight highlight-yellow">full-stack development</span>.
                 </p>
                 <p class="text">
-                    My passion for continuous learning and innovation is evident through my active presence on various platforms.
-                    I thrive on staying updated with the latest trends and technologies in the ever-evolving tech landscape.
+                    My passion for <span class="highlight highlight-cyan">continuous learning and innovation</span> is evident through my active presence on various platforms.
+                    I thrive on staying updated with the <span class="highlight highlight-pink">latest trends and technologies</span> in the ever-evolving tech landscape.
                 </p>
                 <p class="text">
-                    I bring a unique blend of technical expertise, leadership qualities, and a genuine enthusiasm for creating
-                    impactful software solutions.
+                    I bring a unique blend of <span class="highlight highlight-yellow">technical expertise</span>, <span class="highlight highlight-green">leadership qualities</span>, and a genuine enthusiasm for creating
+                    <span class="highlight highlight-cyan">impactful software solutions</span>.
                 </p>
             </div>
         </section>
 
-        <section class="section" id="experience">
-            <h2 class="section-title">EXPERIENCE</h2>
-            <div class="timeline">
-                <div class="timeline-item" id="exp-1">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content card">
-                        <div class="job-header">
-                            <div>
-                                <h3 class="job-title"><i class="fas fa-briefcase"></i> Senior Software Engineer</h3>
-                                <p class="company"><i class="fas fa-building"></i> PROPHET GLOBAL (acquired Unicepta)</p>
-                            </div>
-                            <span class="badge"><i class="fas fa-calendar-alt"></i> Jul 2020 - Nov 2025</span>
-                        </div>
-                        <p class="job-desc"><i class="fas fa-map-marker-alt"></i> Cologne, Germany | Visionary, AI-powered Media & Data Intelligence Solutions</p>
-                        <ul class="job-list">
-                            <li>Part of Core team - Architect and part of every decision</li>
-                            <li>Microservices engineer - Designed and build services for distributed system</li>
-                            <li>Pipeline engineer - Google cloud engineer for data pipeline</li>
-                            <li>Fullstack engineer - Wrote and reviewed code for front/back/cloud</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">Google Cloud</span>
-                            <span class="tag">Kubernetes</span>
-                        </div>
+        <section class="section journey-section" id="experience">
+            <h2 class="section-title-center">My Journey Through Time & Space 🗺️</h2>
+            <div class="journey-container">
+                <div class="journey-timeline">
+                    <h3 class="timeline-header">Journey Timeline</h3>
+            <div class="timeline-list">
+                <div class="timeline-item-flat" id="exp-1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-flat">
+                        <h4 class="timeline-title">Senior Software Engineer @ Prophet Global</h4>
+                        <p class="timeline-date">Jul 2020 - Present</p>
+                        <p class="timeline-description">
+                            Kicked off my journey into the open-source geospatial realm at Prophet Global, working with microservices, data pipelines on Google Cloud, and full-stack development.
+                        </p>
+                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Cologne, Germany (Hybrid)</p>
                     </div>
                 </div>
-                <div class="timeline-item" id="exp-2">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content card">
-                        <div class="job-header">
-                            <div>
-                                <h3 class="job-title"><i class="fas fa-briefcase"></i> Senior Software Engineer</h3>
-                                <p class="company"><i class="fas fa-building"></i> RITECH SOLUTIONS</p>
-                            </div>
-                            <span class="badge"><i class="fas fa-calendar-alt"></i> Jul 2018 - Jul 2020</span>
-                        </div>
-                        <p class="job-desc"><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
-                        <ul class="job-list">
-                            <li>Part of Core team - Team that leads company tech decisions</li>
-                            <li>Tech interviewer - Interview potential candidates</li>
-                            <li>Microsoft project - IOT marketing project in every Microsoft store in USA, Canada, Australia</li>
-                            <li>AppriseMobile Tech Lead - CRM for Toyota and corporates in USA</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">AWS</span>
-                        </div>
+                <div class="timeline-item-flat" id="exp-2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-flat">
+                        <h4 class="timeline-title">Senior Software Engineer @ Ritech Solutions</h4>
+                        <p class="timeline-date">Jul 2018 - Jul 2020</p>
+                        <p class="timeline-description">
+                            Part of Core team leading tech decisions. Led AppriseMobile CRM for Toyota and Microsoft IOT marketing project deployed across USA, Canada, and Australia.
+                        </p>
+                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
                     </div>
                 </div>
-                <div class="timeline-item" id="exp-3">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content card">
-                        <div class="job-header">
-                            <div>
-                                <h3 class="job-title"><i class="fas fa-briefcase"></i> Software Engineer</h3>
-                                <p class="company"><i class="fas fa-building"></i> GUTENBERG TECHNOLOGY</p>
-                            </div>
-                            <span class="badge"><i class="fas fa-calendar-alt"></i> Feb 2017 - Aug 2018</span>
-                        </div>
-                        <p class="job-desc"><i class="fas fa-map-marker-alt"></i> Paris, France</p>
-                        <ul class="job-list">
-                            <li>Fullstack developer - Real-time publisher platform used by National Geographic, IUBH, Fujitsu</li>
-                            <li>MEFIO developer - Highly available publisher platform</li>
-                            <li>SaaS developer - Integrated strategy to migrate from manual sales to SaaS</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">React</span>
-                            <span class="tag">Angular</span>
-                            <span class="tag">AWS Lambda</span>
-                            <span class="tag">Docker</span>
-                        </div>
+                <div class="timeline-item-flat" id="exp-3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-flat">
+                        <h4 class="timeline-title">Software Engineer @ Gutenberg Technology</h4>
+                        <p class="timeline-date">Feb 2017 - Aug 2018</p>
+                        <p class="timeline-description">
+                            Fullstack developer building real-time publisher platform used by National Geographic, IUBH, and Fujitsu. Developed highly available MEFIO platform and integrated SaaS strategy.
+                        </p>
+                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Paris, France</p>
                     </div>
                 </div>
-                <div class="timeline-item" id="exp-4">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content card">
-                        <div class="job-header">
-                            <div>
-                                <h3 class="job-title"><i class="fas fa-briefcase"></i> Software Engineer</h3>
-                                <p class="company"><i class="fas fa-building"></i> GROUP OF COMPANIES</p>
+                <div class="timeline-item-flat" id="exp-4">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content-flat">
+                        <h4 class="timeline-title">Software Engineer @ Group of Companies</h4>
+                        <p class="timeline-date">Mar 2015 - Feb 2017</p>
+                        <p class="timeline-description">
+                            Developed bar/restaurant management app, optimized bank system aggregation from 11h to 1h, and built water supply billing process for Albania government project.
+                        </p>
+                        <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
+                    </div>
+                </div>
+            </div>
+                </div>
+                <div class="journey-map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p><strong>Journey Map</strong></p>
+                        <div class="map-countries">
+                            <div class="map-country">
+                                <span class="country-marker germany"></span>
+                                <span>🇩🇪 Germany</span>
                             </div>
-                            <span class="badge"><i class="fas fa-calendar-alt"></i> Mar 2015 - Feb 2017</span>
+                            <div class="map-country">
+                                <span class="country-marker usa"></span>
+                                <span>🇺🇸 USA</span>
+                            </div>
+                            <div class="map-country">
+                                <span class="country-marker france"></span>
+                                <span>🇫🇷 France</span>
+                            </div>
+                            <div class="map-country">
+                                <span class="country-marker albania"></span>
+                                <span>🇦🇱 Albania</span>
+                            </div>
                         </div>
-                        <p class="job-desc"><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
-                        <ul class="job-list">
-                            <li>Bar management app - Developed app for bar/restaurant management</li>
-                            <li>Bank system optimisation - Optimised aggregation from 11h to 1h</li>
-                            <li>UKD developer - Water supply billing process for Albania, Government project</li>
-                        </ul>
-                        <div class="tech-tags">
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">React</span>
-                            <span class="tag">MongoDB</span>
-                        </div>
+                        <p class="map-subtitle">Click markers to explore!</p>
                     </div>
                 </div>
             </div>
@@ -428,15 +384,70 @@
             </div>
         </section>
 
-        <footer class="footer">
-            <div class="social-links">
-                <a href="https://github.com/marjoballabani" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/marjoballabani" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-                <a href="https://stackoverflow.com/users/marjoballabani" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-stack-overflow"></i></a>
-                <a href="mailto:marjoballabani@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+        <section class="section" id="contact">
+            <h2 class="section-title">GET IN TOUCH</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's build something amazing together</h3>
+                    <p>I'm always interested in hearing about new projects and opportunities.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:marjoballabani@gmail.com" class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <span>marjoballabani@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/marjoballabani" target="_blank" class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <span>linkedin.com/in/marjoballabani</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/marjoballabani" target="_blank" class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <strong>GitHub</strong>
+                                <span>github.com/marjoballabani</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <p class="footer-text">© 2025 Marjo Ballabani. Built with neo-brutalism.</p>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3 class="footer-brand">MARJO BALLABANI</h3>
+                    <p>Senior Software Engineer crafting distributed systems</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <a href="#hero">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#skills">Skills</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <a href="https://github.com/marjoballabani" target="_blank">GitHub</a>
+                        <a href="https://linkedin.com/in/marjoballabani" target="_blank">LinkedIn</a>
+                        <a href="https://stackoverflow.com/users/marjoballabani" target="_blank">Stack Overflow</a>
+                        <a href="mailto:marjoballabani@gmail.com">Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Marjo Ballabani. Built with neo-brutalism & passion.</p>
+                <a href="index.html" class="footer-terminal-link">
+                    <i class="fas fa-terminal"></i> View Terminal Version
+                </a>
+            </div>
         </footer>
+    </div>
     </div>
 
     <script>
@@ -468,97 +479,104 @@
             }
         }
 
-        // Table of Contents Tree
-        const tocToggle = document.getElementById('toc-toggle');
-        const tocClose = document.getElementById('toc-close');
-        const toc = document.getElementById('table-of-contents');
-        const tocTreeToggles = document.querySelectorAll('.toc-tree-toggle');
-        const tocTreeLinks = document.querySelectorAll('.toc-tree-link, .toc-tree-link-nested');
-
-        // Mobile toggle
-        if (tocToggle) {
-            tocToggle.addEventListener('click', () => {
-                toc.classList.add('toc-open');
-            });
-        }
-
-        if (tocClose) {
-            tocClose.addEventListener('click', () => {
-                toc.classList.remove('toc-open');
-            });
-        }
-
-        // Tree expand/collapse
-        tocTreeToggles.forEach(toggle => {
-            toggle.addEventListener('click', (e) => {
-                const targetId = toggle.getAttribute('data-target');
-                if (targetId) {
-                    const nestedList = document.getElementById(targetId);
-                    const chevron = toggle.querySelector('.toc-chevron');
-
-                    if (nestedList) {
-                        nestedList.classList.toggle('expanded');
-                        chevron.classList.toggle('expanded');
-                        e.stopPropagation();
-                    }
-                }
-            });
-        });
-
-        // Smooth scroll on link click
-        tocTreeLinks.forEach(link => {
+        // Smooth Scroll for Navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 const targetId = link.getAttribute('href');
                 const targetSection = document.querySelector(targetId);
-
                 if (targetSection) {
                     targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-                    // Close TOC on mobile
-                    if (window.innerWidth <= 768) {
-                        toc.classList.remove('toc-open');
-                    }
-
-                    // Update active state
-                    tocTreeLinks.forEach(l => l.classList.remove('active'));
-                    link.classList.add('active');
                 }
             });
         });
 
-        // Highlight active section on scroll
-        const sections = document.querySelectorAll('section[id], .timeline-item[id]');
+        // Smart Navbar Scroll
+        const navbar = document.querySelector('.navbar');
+        let lastScroll = 0;
 
         window.addEventListener('scroll', () => {
-            let current = '';
+            const currentScroll = window.pageYOffset;
 
+            // Smart hide/show navbar
+            if (currentScroll > lastScroll && currentScroll > 100) {
+                // Scrolling down & past threshold - hide navbar
+                navbar.classList.add('navbar-hidden');
+            } else if (currentScroll < lastScroll) {
+                // Scrolling up - show navbar
+                navbar.classList.remove('navbar-hidden');
+            }
+
+            // Active link highlighting
+            const sections = document.querySelectorAll('section[id]');
             sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (window.pageYOffset >= sectionTop - 150) {
-                    current = section.getAttribute('id');
-                }
-            });
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
 
-            tocTreeLinks.forEach(link => {
-                link.classList.remove('active');
-                const href = link.getAttribute('href');
-                if (href === `#${current}`) {
-                    link.classList.add('active');
-
-                    // Auto-expand parent if nested item is active
-                    const parentNested = link.closest('.toc-tree-nested');
-                    if (parentNested && !parentNested.classList.contains('expanded')) {
-                        parentNested.classList.add('expanded');
-                        const parentToggle = document.querySelector(`[data-target="${parentNested.id}"]`);
-                        if (parentToggle) {
-                            const chevron = parentToggle.querySelector('.toc-chevron');
-                            if (chevron) chevron.classList.add('expanded');
+                if (currentScroll >= sectionTop && currentScroll < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
                         }
-                    }
+                    });
                 }
             });
+
+            lastScroll = currentScroll;
         });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section, .timeline-item, .skill-box').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Matrix Typing Effect for Hero Greeting
+        const greetingElement = document.getElementById('hero-greeting');
+        const finalText = 'Hi there! 👋';
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
+
+        function matrixTypingEffect() {
+            let iterations = 0;
+            const interval = setInterval(() => {
+                greetingElement.textContent = finalText
+                    .split('')
+                    .map((char, index) => {
+                        if (index < iterations) {
+                            return finalText[index];
+                        }
+                        if (char === ' ' || char === '👋') {
+                            return char;
+                        }
+                        return chars[Math.floor(Math.random() * chars.length)];
+                    })
+                    .join('');
+
+                if (iterations >= finalText.length) {
+                    clearInterval(interval);
+                }
+
+                iterations += 1/3;
+            }, 50);
+        }
+
+        // Start the effect after a short delay
+        setTimeout(matrixTypingEffect, 500);
+
     </script>
 </body>
 </html>
