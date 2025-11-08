@@ -380,12 +380,42 @@ body[data-theme="dark"] .job-desc i {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding: 10px;
+    overflow-x: hidden;
+  }
+
+  .page-wrapper {
+    border: 3px solid var(--border);
+    box-shadow: 4px 4px 0 var(--border);
+    margin: 0 auto 10px;
+    min-height: calc(100vh - 20px);
+    overflow-x: hidden;
+  }
+
   .nav-right {
-    gap: 0.75rem;
+    gap: 0.5rem;
   }
 
   .nav-link {
     display: none;
+  }
+
+  .nav-cta {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    min-height: 36px;
+  }
+
+  .theme-toggle-nav {
+    padding: 0.4rem 0.8rem;
+    min-height: 36px;
+    font-size: 0.9rem;
+  }
+
+  .navbar {
+    margin: 10px 10px 0;
+    box-shadow: 4px 4px 0 var(--border);
   }
 }
 
@@ -813,20 +843,71 @@ body[data-theme="dark"] .stat-number {
 @media (max-width: 768px) {
   .hero {
     min-height: auto;
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
   }
 
-  .hero-avatar {
-    width: 140px;
-    height: 140px;
+  .hero-content {
+    gap: 2rem;
+  }
+
+  .hero-greeting {
+    font-size: 1.5rem;
   }
 
   .hero-name {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
-  .hero-tagline {
-    font-size: 1.25rem;
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .hero-photo {
+    width: 250px;
+    height: 250px;
+    box-shadow: 4px 4px 0 var(--border);
+  }
+
+  .hero-image-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .deco-code {
+    display: none;
+  }
+
+  .deco-terminal {
+    display: none;
+  }
+
+  .deco-floppy {
+    display: none;
+  }
+
+  .deco-label {
+    bottom: -20px;
+    right: -20px;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    box-shadow: 3px 3px 0 var(--border);
+  }
+
+  .tape-sticker {
+    right: 30px;
+    top: -10px;
+    width: 80px;
+    height: 30px;
+  }
+
+  .tech-badges {
+    gap: 0.75rem;
+  }
+
+  .tech-badge {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    box-shadow: 2px 2px 0 0 var(--border);
   }
 
   .journey-map {
@@ -835,6 +916,70 @@ body[data-theme="dark"] .stat-number {
 
   .stats-grid {
     grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+    box-shadow: 3px 3px 0 var(--border);
+  }
+
+  .section-title-center {
+    font-size: 1.75rem;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 4px 4px 0 var(--border);
+  }
+
+  .journey-section {
+    padding: 1.5rem 1rem;
+    box-shadow: 4px 4px 0 var(--border);
+  }
+
+  .journey-timeline {
+    padding: 1rem;
+    box-shadow: 3px 3px 0 var(--border);
+  }
+
+  .journey-map-container {
+    min-height: 400px;
+    box-shadow: 3px 3px 0 var(--border);
+  }
+
+  .map-country {
+    padding: 0.5rem 1rem;
+    box-shadow: 3px 3px 0 0 var(--border);
+  }
+
+  .card {
+    padding: 1.5rem;
+    box-shadow: 4px 4px 0 var(--border);
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .skill-box {
+    padding: 1.5rem;
+    box-shadow: 4px 4px 0 var(--border);
+  }
+
+  .contact-method {
+    padding: 1.5rem;
+    gap: 1rem;
+    box-shadow: 3px 3px 0 var(--border);
+  }
+
+  .contact-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
   }
 }
 
@@ -988,10 +1133,22 @@ body[data-theme="dark"] .stat-number {
 
 .journey-container {
   display: grid;
-  grid-template-columns: 400px 1fr;
-  gap: 0;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
   max-width: 100%;
   margin: 0;
+}
+
+@media (min-width: 769px) {
+  .journey-container {
+    grid-template-columns: 400px 1fr;
+    gap: 0;
+  }
+
+  .journey-timeline {
+    max-height: 600px;
+    overflow-y: auto;
+  }
 }
 
 .journey-timeline {
@@ -1648,6 +1805,10 @@ body[data-theme="dark"] .footer-column a:hover {
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem 1.5rem;
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -1657,15 +1818,33 @@ body[data-theme="dark"] .footer-column a:hover {
     grid-template-columns: 1fr;
   }
 
+  .footer-column a {
+    box-shadow: 2px 2px 0 0 var(--border);
+  }
+
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    padding-top: 1.5rem;
+  }
+
+  .footer-terminal-link {
+    padding: 0.6rem 1.2rem;
+    box-shadow: 3px 3px 0 0 var(--border);
   }
 
   .contact-method {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+  }
+
+  .btn-cta {
+    box-shadow: 3px 3px 0 0 var(--border);
+  }
+
+  .social-btn {
+    box-shadow: 2px 2px 0 0 var(--border);
   }
 }
 
