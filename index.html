@@ -7,14 +7,82 @@
     <link rel="stylesheet" href="neo-styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loader-overlay">
+        <div class="loader-shapes">
+            <div class="loader-shape-svg loader-shape-1">
+                <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="6" width="88" height="88" rx="8" fill="#66d9ef" stroke="#000" stroke-width="4"/>
+                    <rect x="3" y="3" width="88" height="88" rx="8" fill="#66d9ef" stroke="#000" stroke-width="4"/>
+                    <path d="M35 40 L20 50 L35 60" stroke="#000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M65 40 L80 50 L65 60" stroke="#000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="55" y1="35" x2="45" y2="65" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="loader-shape-svg loader-shape-2">
+                <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="6" width="88" height="88" rx="8" fill="#ffd93d" stroke="#000" stroke-width="4"/>
+                    <rect x="3" y="3" width="88" height="88" rx="8" fill="#ffd93d" stroke="#000" stroke-width="4"/>
+                    <path d="M25 35 L40 50 L25 65" stroke="#000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="50" y1="65" x2="75" y2="65" stroke="#000" stroke-width="5" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="loader-shape-svg loader-shape-3">
+                <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="6" width="88" height="88" rx="8" fill="#a8e6cf" stroke="#000" stroke-width="4"/>
+                    <rect x="3" y="3" width="88" height="88" rx="8" fill="#a8e6cf" stroke="#000" stroke-width="4"/>
+                    <rect x="20" y="20" width="60" height="60" rx="3" fill="#ffd93d" stroke="#000" stroke-width="4"/>
+                    <rect x="30" y="20" width="40" height="20" fill="#66d9ef" stroke="#000" stroke-width="3"/>
+                    <rect x="35" y="55" width="30" height="15" rx="2" fill="#000"/>
+                    <circle cx="50" cy="35" r="3" fill="#000"/>
+                </svg>
+            </div>
+        </div>
+        <div class="loader-wrapper">
+            <div class="loader-letter">M</div>
+            <div class="loader-letter">B</div>
+        </div>
+        <div class="loader-progress-bar">
+            <div class="loader-progress-fill"></div>
+        </div>
+    </div>
+
     <div class="page-wrapper">
+    <div class="progress-bar-container">
+        <div class="progress-bar-fill"></div>
+        <div class="progress-checkpoints">
+            <div class="checkpoint" data-section="hero">
+                <div class="checkpoint-dot"></div>
+                <span class="checkpoint-label">Home</span>
+            </div>
+            <div class="checkpoint" data-section="about">
+                <div class="checkpoint-dot"></div>
+                <span class="checkpoint-label">About</span>
+            </div>
+            <div class="checkpoint" data-section="experience">
+                <div class="checkpoint-dot"></div>
+                <span class="checkpoint-label">Journey</span>
+            </div>
+            <div class="checkpoint" data-section="skills">
+                <div class="checkpoint-dot"></div>
+                <span class="checkpoint-label">Skills</span>
+            </div>
+            <div class="checkpoint" data-section="contact">
+                <div class="checkpoint-dot"></div>
+                <span class="checkpoint-label">Contact</span>
+            </div>
+        </div>
+    </div>
     <nav class="navbar">
         <div class="nav-content">
             <a href="#" class="nav-brand">MB</a>
             <div class="nav-right">
                 <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
                 <a href="#experience" class="nav-link">Journey</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#contact" class="nav-cta">Get in Touch!</a>
@@ -116,12 +184,12 @@
         </section>
 
         <section class="section journey-section" id="experience">
-            <h2 class="section-title-center">My Journey Through Time & Space 🗺️</h2>
+            <h2 class="section-title-center">My Journey 🗺️</h2>
             <div class="journey-container">
                 <div class="journey-timeline">
                     <h3 class="timeline-header">Journey Timeline</h3>
             <div class="timeline-list">
-                <div class="timeline-item-flat" id="exp-1">
+                <div class="timeline-item-flat" id="exp-1" data-country="Germany">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content-flat">
                         <h4 class="timeline-title">Senior Software Engineer @ Unicepta</h4>
@@ -132,7 +200,7 @@
                         <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Cologne, Germany (Hybrid)</p>
                     </div>
                 </div>
-                <div class="timeline-item-flat" id="exp-2">
+                <div class="timeline-item-flat" id="exp-2" data-country="Albania">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content-flat">
                         <h4 class="timeline-title">Senior Software Engineer @ Ritech Solutions</h4>
@@ -143,7 +211,7 @@
                         <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
                     </div>
                 </div>
-                <div class="timeline-item-flat" id="exp-3">
+                <div class="timeline-item-flat" id="exp-3" data-country="France">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content-flat">
                         <h4 class="timeline-title">Software Engineer @ Gutenberg Technology</h4>
@@ -154,7 +222,7 @@
                         <p class="timeline-location"><i class="fas fa-map-marker-alt"></i> Paris, France</p>
                     </div>
                 </div>
-                <div class="timeline-item-flat" id="exp-4">
+                <div class="timeline-item-flat" id="exp-4" data-country="Albania">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content-flat">
                         <h4 class="timeline-title">Software Engineer @ Group of Companies</h4>
@@ -168,29 +236,24 @@
             </div>
                 </div>
                 <div class="journey-map-container">
-                    <div class="map-placeholder">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <p><strong>Journey Map</strong></p>
-                        <div class="map-countries">
-                            <div class="map-country">
-                                <span class="country-marker germany"></span>
-                                <span>🇩🇪 Germany</span>
-                            </div>
-                            <div class="map-country">
-                                <span class="country-marker usa"></span>
-                                <span>🇺🇸 USA</span>
-                            </div>
-                            <div class="map-country">
-                                <span class="country-marker france"></span>
-                                <span>🇫🇷 France</span>
-                            </div>
-                            <div class="map-country">
-                                <span class="country-marker albania"></span>
-                                <span>🇦🇱 Albania</span>
-                            </div>
-                        </div>
-                        <p class="map-subtitle">Click markers to explore!</p>
-                    </div>
+                    <div id="journey-map"></div>
+                    <svg class="map-overlay-lines" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+                                <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#000" stroke-width="2" opacity="0.8"/>
+                            </pattern>
+                            <pattern id="scratches" width="200" height="200" patternUnits="userSpaceOnUse">
+                                <line x1="10" y1="20" x2="60" y2="25" stroke="#000" stroke-width="2" opacity="0.7"/>
+                                <line x1="100" y1="50" x2="180" y2="48" stroke="#000" stroke-width="1.5" opacity="0.6"/>
+                                <line x1="30" y1="120" x2="90" y2="115" stroke="#000" stroke-width="2" opacity="0.7"/>
+                                <line x1="140" y1="160" x2="195" y2="165" stroke="#000" stroke-width="1.5" opacity="0.6"/>
+                                <line x1="5" y1="180" x2="45" y2="175" stroke="#000" stroke-width="1.5" opacity="0.6"/>
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#grid)"/>
+                        <rect width="100%" height="100%" fill="url(#scratches)"/>
+                    </svg>
+                    <img src="image/pirat.png" alt="Pirate" class="map-pirate-overlay">
                 </div>
             </div>
         </section>
@@ -328,129 +391,141 @@
             </div>
         </section>
 
-        <section class="section" id="education">
-            <h2 class="section-title">EDUCATION</h2>
-            <div class="card education-card">
-                <div class="education-header">
-                    <div>
-                        <h3 class="education-title">Bachelor's Degree in Computer Science</h3>
-                        <p class="education-school">University of Tirana</p>
+        <section class="section education-languages-section">
+            <div class="education-languages-grid">
+                <div class="education-column">
+                    <h2 class="section-title">EDUCATION</h2>
+                    <div class="card education-card">
+                        <div class="education-header">
+                            <div>
+                                <h3 class="education-title">Bachelor's Degree in Computer Science</h3>
+                                <p class="education-school">University of Tirana</p>
+                            </div>
+                            <span class="badge">2013 - 2016</span>
+                        </div>
+                        <p class="education-location"><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
                     </div>
-                    <span class="badge">2013 - 2016</span>
                 </div>
-                <p class="education-location"><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
-            </div>
-        </section>
-
-        <section class="section" id="languages">
-            <h2 class="section-title">LANGUAGES</h2>
-            <div class="languages-grid">
-                <div class="language-card card">
-                    <div class="language-icon">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="languages-column">
+                    <h2 class="section-title">LANGUAGES</h2>
+                    <div class="card languages-card">
+                        <div class="language-item">
+                            <span class="language-name-inline">Albanian</span>
+                            <div class="language-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name-inline">English</span>
+                            <div class="language-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name-inline">German</span>
+                            <div class="language-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="language-item">
+                            <span class="language-name-inline">Italian</span>
+                            <div class="language-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="language-name">Albanian</h3>
-                    <p class="language-level">Mother Language</p>
-                </div>
-                <div class="language-card card">
-                    <div class="language-icon">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3 class="language-name">English</h3>
-                    <p class="language-level">Professional</p>
-                </div>
-                <div class="language-card card">
-                    <div class="language-icon">
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <h3 class="language-name">Italian</h3>
-                    <p class="language-level">Basic</p>
-                </div>
-                <div class="language-card card">
-                    <div class="language-icon">
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <i class="far fa-star"></i>
-                    </div>
-                    <h3 class="language-name">German</h3>
-                    <p class="language-level">Basic</p>
                 </div>
             </div>
         </section>
 
         <section class="section" id="contact">
             <h2 class="section-title">GET IN TOUCH</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Let's build something amazing together</h3>
-                    <p>I'm always interested in hearing about new projects and opportunities.</p>
-                    <div class="contact-methods">
-                        <a href="mailto:marjoballabani@gmail.com" class="contact-method">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <strong>Email</strong>
-                                <span>marjoballabani@gmail.com</span>
-                            </div>
-                        </a>
-                        <a href="https://linkedin.com/in/marjoballabani" target="_blank" class="contact-method">
-                            <i class="fab fa-linkedin"></i>
-                            <div>
-                                <strong>LinkedIn</strong>
-                                <span>linkedin.com/in/marjoballabani</span>
-                            </div>
-                        </a>
-                        <a href="https://github.com/marjoballabani" target="_blank" class="contact-method">
-                            <i class="fab fa-github"></i>
-                            <div>
-                                <strong>GitHub</strong>
-                                <span>github.com/marjoballabani</span>
-                            </div>
-                        </a>
-                    </div>
+            <div class="contact-container-compact">
+                <p class="contact-intro">Let's build something amazing together</p>
+                <div class="contact-grid">
+                    <a href="https://linkedin.com/in/marjoballabani" target="_blank" class="contact-card">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/marjoballabani" target="_blank" class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://stackoverflow.com/users/7563517/marjo-ballabani" target="_blank" class="contact-card">
+                        <i class="fab fa-stack-overflow"></i>
+                        <span>Stack Overflow</span>
+                    </a>
                 </div>
             </div>
         </section>
 
         <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <h3 class="footer-brand">MARJO BALLABANI</h3>
-                    <p>Senior Software Engineer crafting distributed systems</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Navigation</h4>
+            <div class="footer-compact">
+                <div class="footer-main">
+                    <div class="footer-brand-compact">
+                        <strong>MARJO BALLABANI</strong>
+                        <span>Senior Software Engineer</span>
+                    </div>
+                    <div class="footer-nav-compact">
                         <a href="#hero">Home</a>
                         <a href="#about">About</a>
                         <a href="#experience">Experience</a>
                         <a href="#skills">Skills</a>
                     </div>
-                    <div class="footer-column">
-                        <h4>Connect</h4>
-                        <a href="https://github.com/marjoballabani" target="_blank">GitHub</a>
-                        <a href="https://linkedin.com/in/marjoballabani" target="_blank">LinkedIn</a>
-                        <a href="https://stackoverflow.com/users/marjoballabani" target="_blank">Stack Overflow</a>
-                        <a href="mailto:marjoballabani@gmail.com">Email</a>
+                    <div class="footer-social-compact">
+                        <a href="https://github.com/marjoballabani" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/marjoballabani" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://stackoverflow.com/users/7563517/marjo-ballabani" target="_blank" title="Stack Overflow">
+                            <i class="fab fa-stack-overflow"></i>
+                        </a>
+                        <a href="mailto:marjoballabani@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 Marjo Ballabani. Built with neo-brutalism & passion.</p>
-                <a href="terminal.html" class="footer-terminal-link">
-                    <i class="fas fa-terminal"></i> View Terminal Version
-                </a>
+                <div class="footer-bottom-compact">
+                    <span>© 2025 Marjo Ballabani</span>
+                    <a href="terminal.html" class="footer-terminal-link-compact">
+                        <i class="fas fa-terminal"></i> Terminal
+                    </a>
+                </div>
             </div>
         </footer>
     </div>
     </div>
 
     <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            const loader = document.querySelector('.loader-overlay');
+            setTimeout(() => {
+                loader.classList.add('hidden');
+            }, 1200); // Hide after 1.2 seconds
+        });
+
+        // Hero Photo Tilt on Scroll
+        let photoTilted = false;
+        const heroPhoto = document.querySelector('.hero-photo');
+
+        window.addEventListener('scroll', () => {
+            if (!photoTilted && window.scrollY > 5) {
+                heroPhoto.classList.add('tilted');
+                photoTilted = true;
+            }
+        });
+
         // Theme Toggle
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
@@ -576,6 +651,196 @@
 
         // Start the effect after a short delay
         setTimeout(matrixTypingEffect, 500);
+
+        // Journey Map with Leaflet
+        const initialView = { center: [48.5, 10], zoom: 4 };
+
+        const map = L.map('journey-map', {
+            center: initialView.center,
+            zoom: initialView.zoom,
+            scrollWheelZoom: false,
+            zoomControl: true
+        });
+
+        L.tileLayer('https://watercolormaps.collection.cooperhewitt.org/tile/watercolor/{z}/{x}/{y}.jpg', {
+            attribution: '© Stamen Design, © OpenStreetMap contributors',
+            maxZoom: 16
+        }).addTo(map);
+
+        // Add custom home button control
+        L.Control.Home = L.Control.extend({
+            onAdd: function(map) {
+                const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-home');
+                const link = L.DomUtil.create('a', '', container);
+                link.href = '#';
+                link.title = 'Reset map view';
+                link.innerHTML = '<i class="fas fa-home"></i>';
+
+                L.DomEvent.on(link, 'click', function(e) {
+                    e.preventDefault();
+                    map.setView(initialView.center, initialView.zoom);
+                });
+
+                return container;
+            }
+        });
+
+        new L.Control.Home({ position: 'topright' }).addTo(map);
+
+        // Group locations by country
+        const locations = [
+            {
+                coords: [50.9375, 6.9603],
+                country: 'Germany',
+                companies: [
+                    {
+                        city: 'Cologne',
+                        company: 'Unicepta',
+                        period: '2020 - Present',
+                        role: 'Senior Software Engineer'
+                    }
+                ]
+            },
+            {
+                coords: [41.3275, 19.8187],
+                country: 'Albania',
+                companies: [
+                    {
+                        city: 'Tirana',
+                        company: 'Ritech Solutions',
+                        period: '2018 - 2020',
+                        role: 'Senior Software Engineer'
+                    },
+                    {
+                        city: 'Tirana',
+                        company: 'Group of Companies',
+                        period: '2015 - 2017',
+                        role: 'Software Engineer'
+                    }
+                ]
+            },
+            {
+                coords: [48.8566, 2.3522],
+                country: 'France',
+                companies: [
+                    {
+                        city: 'Paris',
+                        company: 'Gutenberg Technology',
+                        period: '2017 - 2018',
+                        role: 'Software Engineer'
+                    }
+                ]
+            }
+        ];
+
+        // Store markers by country
+        const markers = {};
+
+        // Add custom neo-brutalist markers
+        locations.forEach(location => {
+            const isCurrent = location.country === 'Germany';
+            const markerIcon = L.divIcon({
+                className: isCurrent ? 'neo-marker neo-marker-current' : 'neo-marker',
+                html: `
+                    <div class="neo-marker-label ${isCurrent ? 'neo-marker-label-current' : ''}">${location.country}</div>
+                    <div class="neo-marker-pin ${isCurrent ? 'neo-marker-pin-current' : ''}"></div>
+                `,
+                iconSize: isCurrent ? [35, 35] : [30, 30],
+                iconAnchor: isCurrent ? [17.5, 50] : [15, 45],
+                popupAnchor: [0, isCurrent ? -50 : -45]
+            });
+
+            // Build popup content with all companies for this country
+            let popupContent = `<div class="map-popup">`;
+            popupContent += `<div class="map-popup-country">${location.country}</div>`;
+
+            location.companies.forEach((company, index) => {
+                if (index > 0) popupContent += `<div class="map-popup-divider"></div>`;
+                popupContent += `
+                    <div class="map-popup-company">
+                        <strong>${company.company}</strong>
+                        <span>${company.role}</span>
+                        <small>${company.city}</small>
+                        <small>${company.period}</small>
+                    </div>
+                `;
+            });
+
+            popupContent += `</div>`;
+
+            const marker = L.marker(location.coords, { icon: markerIcon }).addTo(map);
+            marker.bindPopup(popupContent);
+
+            // Store marker by country
+            markers[location.country] = marker;
+        });
+
+        // Add click handlers to timeline items
+        document.querySelectorAll('.timeline-item-flat').forEach(item => {
+            item.addEventListener('click', () => {
+                const country = item.getAttribute('data-country');
+                const marker = markers[country];
+                if (marker) {
+                    map.setView(marker.getLatLng(), 6, {
+                        animate: true,
+                        duration: 1
+                    });
+                    setTimeout(() => {
+                        marker.openPopup();
+                    }, 500);
+                }
+            });
+        });
+
+        // Progress Bar Functionality
+        const progressBarFill = document.querySelector('.progress-bar-fill');
+        const checkpoints = document.querySelectorAll('.checkpoint');
+
+        function updateProgressBar() {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight - windowHeight;
+            const scrolled = window.scrollY;
+            const progress = (scrolled / documentHeight) * 100;
+
+            progressBarFill.style.width = progress + '%';
+
+            // Update active checkpoint based on scroll position
+            const sections = ['hero', 'about', 'experience', 'skills', 'contact'];
+            let activeIndex = 0;
+
+            sections.forEach((sectionId, index) => {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top <= windowHeight / 2 && rect.bottom >= windowHeight / 2) {
+                        activeIndex = index;
+                    }
+                }
+            });
+
+            checkpoints.forEach((checkpoint, index) => {
+                if (index <= activeIndex) {
+                    checkpoint.classList.add('active');
+                } else {
+                    checkpoint.classList.remove('active');
+                }
+            });
+        }
+
+        // Checkpoint click handlers
+        checkpoints.forEach(checkpoint => {
+            checkpoint.addEventListener('click', () => {
+                const sectionId = checkpoint.getAttribute('data-section');
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', updateProgressBar);
+        window.addEventListener('resize', updateProgressBar);
+        updateProgressBar();
 
     </script>
 </body>
