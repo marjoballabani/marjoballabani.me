@@ -1,0 +1,20 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#ffd93d"/>
+
+  <!-- M Letter Box -->
+  <rect x="8" y="16" width="20" height="24" fill="#66d9ef" stroke="#000" stroke-width="2"/>
+
+  <!-- B Letter Box -->
+  <rect x="36" y="16" width="20" height="24" fill="#ff6b9d" stroke="#000" stroke-width="2"/>
+
+  <!-- M Letter -->
+  <text x="18" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#000">M</text>
+
+  <!-- B Letter -->
+  <text x="46" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#000">B</text>
+
+  <!-- Neo-brutalist shadows -->
+  <rect x="11" y="19" width="20" height="24" fill="none" stroke="#000" stroke-width="2" opacity="0.3"/>
+  <rect x="39" y="19" width="20" height="24" fill="none" stroke="#000" stroke-width="2" opacity="0.3"/>
+</svg>
