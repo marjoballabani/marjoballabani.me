@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marjo Ballabani | Resume</title>
+    <link rel="stylesheet" href="neo-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <button id="toc-toggle" class="toc-toggle" aria-label="Toggle table of contents">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <nav id="table-of-contents" class="toc">
+        <div class="toc-header">
+            <h3>OUTLINE</h3>
+            <button id="toc-close" class="toc-close" aria-label="Close outline">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="toc-tree">
+            <li class="toc-tree-item">
+                <div class="toc-tree-toggle" data-target="about-section">
+                    <i class="fas fa-chevron-right toc-chevron"></i>
+                    <a href="#about" class="toc-tree-link">About</a>
+                </div>
+            </li>
+            <li class="toc-tree-item">
+                <div class="toc-tree-toggle" data-target="experience-section">
+                    <i class="fas fa-chevron-right toc-chevron"></i>
+                    <a href="#experience" class="toc-tree-link">Experience</a>
+                </div>
+                <ul class="toc-tree-nested" id="experience-section">
+                    <li class="toc-tree-item-nested">
+                        <a href="#exp-1" class="toc-tree-link-nested">Prophet Global</a>
+                    </li>
+                    <li class="toc-tree-item-nested">
+                        <a href="#exp-2" class="toc-tree-link-nested">Ritech Solutions</a>
+                    </li>
+                    <li class="toc-tree-item-nested">
+                        <a href="#exp-3" class="toc-tree-link-nested">Gutenberg Technology</a>
+                    </li>
+                    <li class="toc-tree-item-nested">
+                        <a href="#exp-4" class="toc-tree-link-nested">Group of Companies</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="toc-tree-item">
+                <div class="toc-tree-toggle" data-target="skills-section">
+                    <i class="fas fa-chevron-right toc-chevron"></i>
+                    <a href="#skills" class="toc-tree-link">Skills</a>
+                </div>
+                <ul class="toc-tree-nested" id="skills-section">
+                    <li class="toc-tree-item-nested">
+                        <a href="#skills" class="toc-tree-link-nested">Frontend</a>
+                    </li>
+                    <li class="toc-tree-item-nested">
+                        <a href="#skills" class="toc-tree-link-nested">Languages</a>
+                    </li>
+                    <li class="toc-tree-item-nested">
+                        <a href="#skills" class="toc-tree-link-nested">Backend</a>
+                    </li>
+                    <li class="toc-tree-item-nested">
+                        <a href="#skills" class="toc-tree-link-nested">Cloud & DevOps</a>
+                    </li>
+                    <li class="toc-tree-item-nested">
+                        <a href="#skills" class="toc-tree-link-nested">Databases</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="toc-tree-item">
+                <div class="toc-tree-toggle" data-target="education-section">
+                    <i class="fas fa-chevron-right toc-chevron"></i>
+                    <a href="#education" class="toc-tree-link">Education</a>
+                </div>
+            </li>
+            <li class="toc-tree-item">
+                <div class="toc-tree-toggle" data-target="languages-section">
+                    <i class="fas fa-chevron-right toc-chevron"></i>
+                    <a href="#languages" class="toc-tree-link">Languages</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header class="header">
+            <img src="image/avatar-gpt.png" alt="Marjo Ballabani" class="avatar">
+            <div class="header-content">
+                <h1 class="name">MARJO BALLABANI</h1>
+                <p class="tagline">Senior Software Engineer</p>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Munich, Germany</p>
+            </div>
+            <div class="header-actions">
+                <a href="index.html" class="btn btn-terminal">
+                    <i class="fas fa-terminal"></i> Terminal
+                </a>
+                <a href="mailto:marjoballabani@gmail.com" class="btn btn-primary">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+                <a href="/Users/mballabani/Downloads/CV - MARJO BALLABANI - MUNICH.pdf" class="btn btn-secondary" download>
+                    <i class="fas fa-download"></i> CV
+                </a>
+            </div>
+        </header>
+
+        <section class="section" id="about">
+            <h2 class="section-title">ABOUT</h2>
+            <div class="card">
+                <p class="text">
+                    Highly experienced and dynamic software engineer with a rich professional background spanning over 11 years.
+                    Throughout my career, I've held positions in renowned tech companies across Albania, France, USA, and Germany.
+                    My contributions have been pivotal in designing and constructing microservices for distributed systems,
+                    implementing data pipelines on Google Cloud, and engaging in full-stack development.
+                </p>
+                <p class="text">
+                    My passion for continuous learning and innovation is evident through my active presence on various platforms.
+                    I thrive on staying updated with the latest trends and technologies in the ever-evolving tech landscape.
+                </p>
+                <p class="text">
+                    I bring a unique blend of technical expertise, leadership qualities, and a genuine enthusiasm for creating
+                    impactful software solutions.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <h2 class="section-title">EXPERIENCE</h2>
+            <div class="timeline">
+                <div class="timeline-item" id="exp-1">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card">
+                        <div class="job-header">
+                            <div>
+                                <h3 class="job-title"><i class="fas fa-briefcase"></i> Senior Software Engineer</h3>
+                                <p class="company"><i class="fas fa-building"></i> PROPHET GLOBAL (acquired Unicepta)</p>
+                            </div>
+                            <span class="badge"><i class="fas fa-calendar-alt"></i> Jul 2020 - Nov 2025</span>
+                        </div>
+                        <p class="job-desc"><i class="fas fa-map-marker-alt"></i> Cologne, Germany | Visionary, AI-powered Media & Data Intelligence Solutions</p>
+                        <ul class="job-list">
+                            <li>Part of Core team - Architect and part of every decision</li>
+                            <li>Microservices engineer - Designed and build services for distributed system</li>
+                            <li>Pipeline engineer - Google cloud engineer for data pipeline</li>
+                            <li>Fullstack engineer - Wrote and reviewed code for front/back/cloud</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Google Cloud</span>
+                            <span class="tag">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" id="exp-2">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card">
+                        <div class="job-header">
+                            <div>
+                                <h3 class="job-title"><i class="fas fa-briefcase"></i> Senior Software Engineer</h3>
+                                <p class="company"><i class="fas fa-building"></i> RITECH SOLUTIONS</p>
+                            </div>
+                            <span class="badge"><i class="fas fa-calendar-alt"></i> Jul 2018 - Jul 2020</span>
+                        </div>
+                        <p class="job-desc"><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
+                        <ul class="job-list">
+                            <li>Part of Core team - Team that leads company tech decisions</li>
+                            <li>Tech interviewer - Interview potential candidates</li>
+                            <li>Microsoft project - IOT marketing project in every Microsoft store in USA, Canada, Australia</li>
+                            <li>AppriseMobile Tech Lead - CRM for Toyota and corporates in USA</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">AWS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" id="exp-3">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card">
+                        <div class="job-header">
+                            <div>
+                                <h3 class="job-title"><i class="fas fa-briefcase"></i> Software Engineer</h3>
+                                <p class="company"><i class="fas fa-building"></i> GUTENBERG TECHNOLOGY</p>
+                            </div>
+                            <span class="badge"><i class="fas fa-calendar-alt"></i> Feb 2017 - Aug 2018</span>
+                        </div>
+                        <p class="job-desc"><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+                        <ul class="job-list">
+                            <li>Fullstack developer - Real-time publisher platform used by National Geographic, IUBH, Fujitsu</li>
+                            <li>MEFIO developer - Highly available publisher platform</li>
+                            <li>SaaS developer - Integrated strategy to migrate from manual sales to SaaS</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Angular</span>
+                            <span class="tag">AWS Lambda</span>
+                            <span class="tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" id="exp-4">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content card">
+                        <div class="job-header">
+                            <div>
+                                <h3 class="job-title"><i class="fas fa-briefcase"></i> Software Engineer</h3>
+                                <p class="company"><i class="fas fa-building"></i> GROUP OF COMPANIES</p>
+                            </div>
+                            <span class="badge"><i class="fas fa-calendar-alt"></i> Mar 2015 - Feb 2017</span>
+                        </div>
+                        <p class="job-desc"><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
+                        <ul class="job-list">
+                            <li>Bar management app - Developed app for bar/restaurant management</li>
+                            <li>Bank system optimisation - Optimised aggregation from 11h to 1h</li>
+                            <li>UKD developer - Water supply billing process for Albania, Government project</li>
+                        </ul>
+                        <div class="tech-tags">
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">React</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <h2 class="section-title">SKILLS</h2>
+
+            <div class="skills-grid-modern">
+                <div class="skill-box">
+                    <div class="skill-box-header">
+                        <i class="fab fa-react skill-icon-large"></i>
+                        <h3 class="skill-box-title">Frontend</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tag"><i class="fab fa-react"></i> React.js</span>
+                        <span class="tag"><i class="fas fa-database"></i> Redux</span>
+                        <span class="tag"><i class="fas fa-database"></i> MobX</span>
+                        <span class="tag"><i class="fab fa-angular"></i> Angular</span>
+                        <span class="tag"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                        <span class="tag"><i class="fas fa-palette"></i> Material-UI</span>
+                        <span class="tag"><i class="fas fa-mobile-alt"></i> React Native</span>
+                        <span class="tag"><i class="fas fa-mobile"></i> Ionic</span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-box-header">
+                        <i class="fas fa-code skill-icon-large"></i>
+                        <h3 class="skill-box-title">Languages</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="tag"><i class="fab fa-js"></i> TypeScript</span>
+                        <span class="tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="tag"><i class="fab fa-java"></i> Java</span>
+                        <span class="tag"><i class="fas fa-code"></i> Kotlin</span>
+                        <span class="tag"><i class="fas fa-database"></i> SQL</span>
+                        <span class="tag"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="tag"><i class="fab fa-css3"></i> CSS</span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-box-header">
+                        <i class="fab fa-node skill-icon-large"></i>
+                        <h3 class="skill-box-title">Backend</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tag"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="tag"><i class="fas fa-server"></i> Express.js</span>
+                        <span class="tag"><i class="fas fa-server"></i> Hapi</span>
+                        <span class="tag"><i class="fas fa-fire"></i> Firebase</span>
+                        <span class="tag"><i class="fas fa-bolt"></i> Cloud Functions</span>
+                        <span class="tag"><i class="fab fa-aws"></i> AWS Lambda</span>
+                        <span class="tag"><i class="fas fa-cube"></i> AWS S3</span>
+                        <span class="tag"><i class="fas fa-network-wired"></i> NGINX</span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-box-header">
+                        <i class="fas fa-cloud skill-icon-large"></i>
+                        <h3 class="skill-box-title">Cloud & DevOps</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tag"><i class="fab fa-google"></i> Google Cloud</span>
+                        <span class="tag"><i class="fab fa-aws"></i> AWS</span>
+                        <span class="tag"><i class="fab fa-microsoft"></i> Azure</span>
+                        <span class="tag"><i class="fab fa-docker"></i> Docker</span>
+                        <span class="tag"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                        <span class="tag"><i class="fas fa-code-branch"></i> Terraform</span>
+                        <span class="tag"><i class="fas fa-play"></i> Cloud Run</span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-box-header">
+                        <i class="fas fa-database skill-icon-large"></i>
+                        <h3 class="skill-box-title">Databases</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tag"><i class="fas fa-leaf"></i> MongoDB</span>
+                        <span class="tag"><i class="fas fa-fire"></i> Firestore</span>
+                        <span class="tag"><i class="fas fa-database"></i> RethinkDB</span>
+                        <span class="tag"><i class="fas fa-memory"></i> Redis</span>
+                        <span class="tag"><i class="fas fa-elephant"></i> PostgreSQL</span>
+                        <span class="tag"><i class="fas fa-server"></i> SQL Server</span>
+                        <span class="tag"><i class="fab fa-google"></i> BigQuery</span>
+                    </div>
+                </div>
+
+                <div class="skill-box">
+                    <div class="skill-box-header">
+                        <i class="fas fa-tools skill-icon-large"></i>
+                        <h3 class="skill-box-title">Tools & More</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tag"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="tag"><i class="fas fa-search"></i> Elasticsearch</span>
+                        <span class="tag"><i class="fas fa-project-diagram"></i> GraphQL</span>
+                        <span class="tag"><i class="fas fa-chart-line"></i> pandas</span>
+                        <span class="tag"><i class="fas fa-vial"></i> Jest</span>
+                        <span class="tag"><i class="fas fa-vial"></i> Cypress</span>
+                        <span class="tag"><i class="fas fa-tasks"></i> Jira</span>
+                        <span class="tag"><i class="fas fa-code"></i> VSCode</span>
+                    </div>
+                </div>
+
+                <div class="skill-box highlight-box">
+                    <div class="skill-box-header">
+                        <i class="fas fa-sitemap skill-icon-large"></i>
+                        <h3 class="skill-box-title">Architecture</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tag"><i class="fas fa-cubes"></i> Microservices</span>
+                        <span class="tag"><i class="fas fa-cloud"></i> SaaS</span>
+                        <span class="tag"><i class="fas fa-exchange-alt"></i> Pub/Sub</span>
+                        <span class="tag"><i class="fas fa-route"></i> Routing Slip</span>
+                        <span class="tag"><i class="fas fa-inbox"></i> Dead Letter Queues</span>
+                    </div>
+                </div>
+
+                <div class="skill-box highlight-box">
+                    <div class="skill-box-header">
+                        <i class="fas fa-users-cog skill-icon-large"></i>
+                        <h3 class="skill-box-title">Methodologies</h3>
+                    </div>
+                    <div class="tech-tags">
+                        <span class="tag"><i class="fas fa-sync-alt"></i> Agile</span>
+                        <span class="tag"><i class="fas fa-users"></i> Scrum</span>
+                        <span class="tag"><i class="fas fa-code-branch"></i> CI/CD</span>
+                        <span class="tag"><i class="fas fa-vial"></i> TDD</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="education">
+            <h2 class="section-title">EDUCATION</h2>
+            <div class="card education-card">
+                <div class="education-header">
+                    <div>
+                        <h3 class="education-title">Bachelor's Degree in Computer Science</h3>
+                        <p class="education-school">University of Tirana</p>
+                    </div>
+                    <span class="badge">2013 - 2016</span>
+                </div>
+                <p class="education-location"><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
+            </div>
+        </section>
+
+        <section class="section" id="languages">
+            <h2 class="section-title">LANGUAGES</h2>
+            <div class="languages-grid">
+                <div class="language-card card">
+                    <div class="language-icon">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="language-name">Albanian</h3>
+                    <p class="language-level">Mother Language</p>
+                </div>
+                <div class="language-card card">
+                    <div class="language-icon">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="language-name">English</h3>
+                    <p class="language-level">Professional</p>
+                </div>
+                <div class="language-card card">
+                    <div class="language-icon">
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h3 class="language-name">Italian</h3>
+                    <p class="language-level">Basic</p>
+                </div>
+                <div class="language-card card">
+                    <div class="language-icon">
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <h3 class="language-name">German</h3>
+                    <p class="language-level">Basic</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="social-links">
+                <a href="https://github.com/marjoballabani" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/marjoballabani" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                <a href="https://stackoverflow.com/users/marjoballabani" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-stack-overflow"></i></a>
+                <a href="mailto:marjoballabani@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="footer-text">© 2025 Marjo Ballabani. Built with neo-brutalism.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        body.setAttribute('data-theme', currentTheme);
+        updateIcon(currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const theme = body.getAttribute('data-theme');
+            const newTheme = theme === 'light' ? 'dark' : 'light';
+
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateIcon(newTheme);
+        });
+
+        function updateIcon(theme) {
+            if (theme === 'dark') {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        }
+
+        // Table of Contents Tree
+        const tocToggle = document.getElementById('toc-toggle');
+        const tocClose = document.getElementById('toc-close');
+        const toc = document.getElementById('table-of-contents');
+        const tocTreeToggles = document.querySelectorAll('.toc-tree-toggle');
+        const tocTreeLinks = document.querySelectorAll('.toc-tree-link, .toc-tree-link-nested');
+
+        // Mobile toggle
+        if (tocToggle) {
+            tocToggle.addEventListener('click', () => {
+                toc.classList.add('toc-open');
+            });
+        }
+
+        if (tocClose) {
+            tocClose.addEventListener('click', () => {
+                toc.classList.remove('toc-open');
+            });
+        }
+
+        // Tree expand/collapse
+        tocTreeToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                const targetId = toggle.getAttribute('data-target');
+                if (targetId) {
+                    const nestedList = document.getElementById(targetId);
+                    const chevron = toggle.querySelector('.toc-chevron');
+
+                    if (nestedList) {
+                        nestedList.classList.toggle('expanded');
+                        chevron.classList.toggle('expanded');
+                        e.stopPropagation();
+                    }
+                }
+            });
+        });
+
+        // Smooth scroll on link click
+        tocTreeLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                    // Close TOC on mobile
+                    if (window.innerWidth <= 768) {
+                        toc.classList.remove('toc-open');
+                    }
+
+                    // Update active state
+                    tocTreeLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Highlight active section on scroll
+        const sections = document.querySelectorAll('section[id], .timeline-item[id]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocTreeLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href === `#${current}`) {
+                    link.classList.add('active');
+
+                    // Auto-expand parent if nested item is active
+                    const parentNested = link.closest('.toc-tree-nested');
+                    if (parentNested && !parentNested.classList.contains('expanded')) {
+                        parentNested.classList.add('expanded');
+                        const parentToggle = document.querySelector(`[data-target="${parentNested.id}"]`);
+                        if (parentToggle) {
+                            const chevron = parentToggle.querySelector('.toc-chevron');
+                            if (chevron) chevron.classList.add('expanded');
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

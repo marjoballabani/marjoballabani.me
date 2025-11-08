@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marjo Ballabani | Cloud Software Engineer</title>
+    <link rel="stylesheet" href="styles-about.css">
+    
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js for Data Visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- GSAP for Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Cloud Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="header-left">
+                    <div class="profile-section">
+                        <div class="avatar-container">
+                            <img src="image/avatar.png" alt="Marjo Ballabani" class="profile-avatar">
+                            <div class="status-indicator online"></div>
+                        </div>
+                        <div class="profile-info">
+                            <h1 class="profile-name">Marjo Ballabani</h1>
+                            <p class="profile-title">Senior Cloud Software Engineer</p>
+                            <div class="profile-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Munich, Germany</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="7">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="25">0</div>
+                            <div class="stat-label">Projects Delivered</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="12">0</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+                    <div class="header-actions">
+                        <a href="mailto:marjo@ballabani.me" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Contact Me
+                        </a>
+                        <a href="index.html" class="btn btn-secondary">
+                            <i class="fas fa-terminal"></i>
+                            Terminal View
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard Content -->
+        <main class="dashboard-main">
+            <!-- Navigation Tabs -->
+            <nav class="dashboard-nav">
+                <div class="nav-tabs">
+                    <button class="nav-tab active" data-tab="overview">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Overview
+                    </button>
+                    <button class="nav-tab" data-tab="experience">
+                        <i class="fas fa-briefcase"></i>
+                        Experience
+                    </button>
+                    <button class="nav-tab" data-tab="skills">
+                        <i class="fas fa-code"></i>
+                        Skills
+                    </button>
+                    <button class="nav-tab" data-tab="projects">
+                        <i class="fas fa-project-diagram"></i>
+                        Projects
+                    </button>
+                    <button class="nav-tab" data-tab="education">
+                        <i class="fas fa-graduation-cap"></i>
+                        Education
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Overview Tab -->
+                <div class="tab-pane active" id="overview">
+                    <div class="dashboard-grid">
+                        <!-- About Me Card -->
+                        <div class="dashboard-card card-large">
+                            <div class="card-header">
+                                <h3><i class="fas fa-user"></i> About Me</h3>
+                            </div>
+                            <div class="card-content">
+                                <p>Passionate Senior Software Engineer with 7+ years of experience in cloud architecture and full-stack development. Specialized in building scalable applications using modern technologies and cloud platforms.</p>
+                                <div class="skills-preview">
+                                    <span class="skill-tag">AWS</span>
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cloud Infrastructure Card -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-cloud"></i> Cloud Expertise</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="cloud-metrics">
+                                    <div class="metric">
+                                        <i class="fab fa-aws"></i>
+                                        <div>
+                                            <span class="metric-value">AWS</span>
+                                            <span class="metric-label">Certified</span>
+                                        </div>
+                                    </div>
+                                    <div class="metric">
+                                        <i class="fab fa-docker"></i>
+                                        <div>
+                                            <span class="metric-value">Docker</span>
+                                            <span class="metric-label">Expert</span>
+                                        </div>
+                                    </div>
+                                    <div class="metric">
+                                        <i class="fas fa-cubes"></i>
+                                        <div>
+                                            <span class="metric-value">K8s</span>
+                                            <span class="metric-label">Advanced</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activity Card -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-chart-line"></i> Recent Activity</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-code-branch"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>Deployed microservices architecture</p>
+                                        <span class="activity-time">2 days ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-server"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>Optimized database performance</p>
+                                        <span class="activity-time">1 week ago</span>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <div class="activity-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="activity-content">
+                                        <p>Implemented security updates</p>
+                                        <span class="activity-time">2 weeks ago</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Performance Metrics Card -->
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3><i class="fas fa-tachometer-alt"></i> Performance</h3>
+                            </div>
+                            <div class="card-content">
+                                <canvas id="performanceChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Tab -->
+                <div class="tab-pane" id="experience">
+                    <div class="experience-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Senior Software Engineer</h3>
+                                    <span class="company">Tech Company</span>
+                                    <span class="duration">2021 - Present</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Leading development of cloud-native applications using AWS services. Implemented CI/CD pipelines and microservices architecture.</p>
+                                    <div class="achievements">
+                                        <div class="achievement">
+                                            <i class="fas fa-arrow-up"></i>
+                                            <span>Improved system performance by 40%</span>
+                                        </div>
+                                        <div class="achievement">
+                                            <i class="fas fa-dollar-sign"></i>
+                                            <span>Reduced infrastructure costs by 30%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Full Stack Developer</h3>
+                                    <span class="company">Previous Company</span>
+                                    <span class="duration">2019 - 2021</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Developed responsive web applications using React and Node.js. Collaborated with cross-functional teams to deliver high-quality products.</p>
+                                    <div class="achievements">
+                                        <div class="achievement">
+                                            <i class="fas fa-users"></i>
+                                            <span>Led team of 5 developers</span>
+                                        </div>
+                                        <div class="achievement">
+                                            <i class="fas fa-clock"></i>
+                                            <span>Delivered projects 20% faster</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3>Software Developer</h3>
+                                    <span class="company">Startup Company</span>
+                                    <span class="duration">2017 - 2019</span>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>Built foundational skills in software development, working on various projects from web applications to mobile apps.</p>
+                                    <div class="achievements">
+                                        <div class="achievement">
+                                            <i class="fas fa-mobile-alt"></i>
+                                            <span>Developed 3 mobile applications</span>
+                                        </div>
+                                        <div class="achievement">
+                                            <i class="fas fa-star"></i>
+                                            <span>Received excellent performance reviews</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Tab -->
+                <div class="tab-pane" id="skills">
+                    <div class="skills-dashboard">
+                        <div class="skills-grid">
+                            <div class="skills-card">
+                                <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                                <canvas id="cloudSkillsChart"></canvas>
+                                <div class="skill-tags">
+                                    <span class="skill-tag advanced">AWS</span>
+                                    <span class="skill-tag expert">Docker</span>
+                                    <span class="skill-tag intermediate">Kubernetes</span>
+                                    <span class="skill-tag advanced">Terraform</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-card">
+                                <h3><i class="fas fa-code"></i> Programming</h3>
+                                <canvas id="programmingSkillsChart"></canvas>
+                                <div class="skill-tags">
+                                    <span class="skill-tag expert">JavaScript</span>
+                                    <span class="skill-tag expert">Python</span>
+                                    <span class="skill-tag advanced">Java</span>
+                                    <span class="skill-tag intermediate">Go</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-card">
+                                <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+                                <canvas id="frameworksSkillsChart"></canvas>
+                                <div class="skill-tags">
+                                    <span class="skill-tag expert">React</span>
+                                    <span class="skill-tag expert">Node.js</span>
+                                    <span class="skill-tag advanced">Django</span>
+                                    <span class="skill-tag intermediate">Spring</span>
+                                </div>
+                            </div>
+
+                            <div class="skills-card">
+                                <h3><i class="fas fa-database"></i> Databases</h3>
+                                <div class="database-skills">
+                                    <div class="skill-bar">
+                                        <div class="skill-info">
+                                            <span>PostgreSQL</span>
+                                            <span>90%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" data-width="90"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-info">
+                                            <span>MongoDB</span>
+                                            <span>85%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" data-width="85"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-info">
+                                            <span>Redis</span>
+                                            <span>80%</span>
+                                        </div>
+                                        <div class="progress-bar">
+                                            <div class="progress" data-width="80"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projects Tab -->
+                <div class="tab-pane" id="projects">
+                    <div class="projects-grid">
+                        <div class="project-card featured">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </div>
+                                <div class="project-status">
+                                    <span class="status-badge live">Live</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Cloud Migration Platform</h3>
+                                <p>Built a comprehensive cloud migration platform that helped organizations move their infrastructure to AWS with zero downtime.</p>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">99.9%</span>
+                                        <span class="metric-label">Uptime</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">500TB</span>
+                                        <span class="metric-label">Data Migrated</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">30%</span>
+                                        <span class="metric-label">Cost Reduction</span>
+                                    </div>
+                                </div>
+                                <div class="project-tech">
+                                    <span class="tech-tag">AWS</span>
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div class="project-status">
+                                    <span class="status-badge development">In Development</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Analytics Dashboard</h3>
+                                <p>Real-time analytics dashboard for monitoring application performance and user behavior across multiple platforms.</p>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">1M+</span>
+                                        <span class="metric-label">Events/Day</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">50ms</span>
+                                        <span class="metric-label">Response Time</span>
+                                    </div>
+                                </div>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">FastAPI</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">Redis</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <div class="project-header">
+                                <div class="project-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <div class="project-status">
+                                    <span class="status-badge completed">Completed</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>Mobile Banking App</h3>
+                                <p>Secure mobile banking application with biometric authentication and real-time transaction processing.</p>
+                                <div class="project-metrics">
+                                    <div class="metric">
+                                        <span class="metric-value">100K+</span>
+                                        <span class="metric-label">Downloads</span>
+                                    </div>
+                                    <div class="metric">
+                                        <span class="metric-value">4.8</span>
+                                        <span class="metric-label">App Rating</span>
+                                    </div>
+                                </div>
+                                <div class="project-tech">
+                                    <span class="tech-tag">React Native</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                    <span class="tech-tag">JWT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Tab -->
+                <div class="tab-pane" id="education">
+                    <div class="education-container">
+                        <div class="education-grid">
+                            <div class="education-card">
+                                <div class="education-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="education-content">
+                                    <h3>Master of Computer Science</h3>
+                                    <p class="institution">Technical University Munich</p>
+                                    <p class="duration">2015 - 2017</p>
+                                    <p class="description">Specialized in Distributed Systems and Cloud Computing. Thesis on "Scalable Microservices Architecture in Cloud Environments".</p>
+                                </div>
+                            </div>
+
+                            <div class="education-card">
+                                <div class="education-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="education-content">
+                                    <h3>Bachelor of Software Engineering</h3>
+                                    <p class="institution">University of Tirana</p>
+                                    <p class="duration">2011 - 2015</p>
+                                    <p class="description">Foundation in software development principles, algorithms, and data structures. Graduated Summa Cum Laude.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="certifications-section">
+                            <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                            <div class="certifications-grid">
+                                <div class="cert-card">
+                                    <div class="cert-icon">
+                                        <i class="fab fa-aws"></i>
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>AWS Solutions Architect</h4>
+                                        <p>Professional Level</p>
+                                        <span class="cert-date">2023</span>
+                                    </div>
+                                </div>
+
+                                <div class="cert-card">
+                                    <div class="cert-icon">
+                                        <i class="fab fa-docker"></i>
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Docker Certified Associate</h4>
+                                        <p>Container Technology</p>
+                                        <span class="cert-date">2022</span>
+                                    </div>
+                                </div>
+
+                                <div class="cert-card">
+                                    <div class="cert-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="cert-content">
+                                        <h4>Certified Ethical Hacker</h4>
+                                        <p>Cybersecurity</p>
+                                        <span class="cert-date">2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="dashboard.js"></script>
+</body>
+</html>
