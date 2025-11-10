@@ -1,0 +1,12 @@
+# Build artifacts and cache
+gb/spray-*
+
+# Node modules
+node_modules/
+
+# MacOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
