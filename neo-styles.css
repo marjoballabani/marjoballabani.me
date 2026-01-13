@@ -3355,3 +3355,152 @@ body[data-theme="dark"] .language-item:hover {
     font-size: 0.85rem;
   }
 }
+
+/* Navbar LazyFire Logo */
+.nav-lazyfire {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border: 3px solid var(--border);
+  background: var(--white);
+  box-shadow: 3px 3px 0 var(--border);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.nav-lazyfire:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--border);
+}
+
+.lazyfire-logo {
+  display: block;
+}
+
+.nav-lazyfire-text {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text);
+}
+
+/* Projects Section - Creator Showcase */
+.section-compact {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.creator-showcase {
+  text-align: center;
+  padding: 1rem;
+}
+
+.creator-label {
+  font-family: 'Caveat', cursive;
+  font-size: 1.8rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.creator-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: var(--yellow);
+  border: 4px solid var(--border);
+  box-shadow: 6px 6px 0 var(--border);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.creator-project:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 3px 3px 0 var(--border);
+}
+
+.creator-logo {
+  display: block;
+}
+
+.creator-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -1px;
+}
+
+.creator-tagline {
+  font-size: 1.1rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.creator-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--white);
+  border: 3px solid var(--border);
+  box-shadow: 4px 4px 0 var(--border);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+
+.creator-github:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--border);
+}
+
+/* Dark mode for projects */
+body[data-theme="dark"] .creator-project {
+  background: #3a3a3a;
+}
+
+body[data-theme="dark"] .nav-lazyfire {
+  background: #3a3a3a;
+}
+
+/* Responsive projects */
+@media (max-width: 768px) {
+  .creator-project {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .creator-name {
+    font-size: 1.8rem;
+  }
+
+  .creator-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .nav-lazyfire {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .lazyfire-logo {
+    width: 22px;
+    height: 22px;
+  }
+
+  .nav-lazyfire-text {
+    font-size: 0.75rem;
+  }
+
+  .section-compact {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,68 @@
+<svg fill="none" height="100" viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(-4px); opacity: 0.7; }
+    }
+    @keyframes float-delayed {
+      0%, 100% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(-5px); opacity: 0.6; }
+    }
+    @keyframes float-more {
+      0%, 100% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(-6px); opacity: 0.5; }
+    }
+    @keyframes blink {
+      0%, 85%, 100% { opacity: 1; }
+      90%, 95% { opacity: 0; }
+    }
+    @keyframes blink-open {
+      0%, 85%, 100% { opacity: 0; }
+      90%, 95% { opacity: 1; }
+    }
+    .z1 { animation: float 2s ease-in-out infinite; }
+    .z2 { animation: float-delayed 2s ease-in-out infinite 0.3s; }
+    .z3 { animation: float-more 2s ease-in-out infinite 0.6s; }
+    .eye-closed { animation: blink 5s ease-in-out infinite; }
+    .eye-open { animation: blink-open 5s ease-in-out infinite; }
+  </style>
+
+  <!-- Main fire shape -->
+  <g transform="translate(13, 5)">
+    <path d="M22.5752 87.933C26.3634 89.4568 30.4722 90.3615 34.7873 90.5132C40.6261 90.717 46.1816 89.5089 51.1455 87.2147C45.1923 84.8757 39.8009 81.4554 35.1974 77.2024C32.2171 81.9798 27.805 85.7506 22.5752 87.933Z" fill="#FF9100">
+      <animate attributeName="opacity" values="1;0.7;1;0.8;1" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M35.1996 77.2049C24.6952 67.4909 18.3219 53.4295 18.8613 38.0059C18.8787 37.5063 18.906 37.0042 18.9359 36.5046C17.0542 36.0174 15.0905 35.7216 13.0697 35.6495C10.1764 35.5476 7.37501 35.908 4.73026 36.6512C1.92643 41.5629 0.233686 47.1979 0.0224039 53.2356C-0.521958 68.8158 8.90619 82.4273 22.5749 87.9331C27.8047 85.7532 32.2168 81.9849 35.1996 77.2049Z" fill="#FFC400">
+      <animate attributeName="opacity" values="1;0.75;1;0.85;1" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M35.1998 77.2047C37.6433 73.2973 39.1222 68.7137 39.2962 63.7772C39.7486 50.792 31.019 39.6214 18.9361 36.5044C18.9063 37.004 18.8789 37.5061 18.8615 38.0057C18.3246 53.4268 24.6954 67.4883 35.1998 77.2047Z" fill="#FF9100">
+      <animate attributeName="opacity" values="0.9;1;0.7;1;0.9" dur="1.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M37.9435 0C31.0632 5.51321 25.6271 12.7813 22.341 21.1555C20.4594 25.9529 19.2762 31.1032 18.9307 36.5045C31.0135 39.6216 39.7432 50.7922 39.2883 63.7798C39.1168 68.7163 37.6304 73.2949 35.1919 77.2074C39.7929 81.4653 45.1868 84.8806 51.14 87.2196C63.0911 81.6965 71.5697 69.81 72.0594 55.7511C72.3775 46.6411 68.8777 38.5229 63.9337 31.6699C58.7113 24.4242 37.9435 0 37.9435 0Z" fill="#DD2C00">
+      <animate attributeName="opacity" values="1;0.85;1;0.9;1" dur="1.3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Eyes -->
+  <g transform="translate(13, 5)">
+    <!-- Left eye closed (default) -->
+    <path class="eye-closed" d="M25 45 Q28 48, 31 45" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <!-- Left eye open -->
+    <circle class="eye-open" cx="28" cy="45" r="3" fill="#1a1a1a"/>
+
+    <!-- Right eye closed (default) -->
+    <path class="eye-closed" d="M41 45 Q44 48, 47 45" stroke="#1a1a1a" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <!-- Right eye open -->
+    <circle class="eye-open" cx="44" cy="45" r="3" fill="#1a1a1a"/>
+
+    <!-- Smile -->
+    <path d="M30 58 Q36 63, 42 58" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- ZZZ floating -->
+  <g>
+    <text class="z1" x="70" y="25" font-family="Arial, sans-serif" font-weight="bold" font-size="14" fill="#FF6F00">z</text>
+    <text class="z2" x="78" y="18" font-family="Arial, sans-serif" font-weight="bold" font-size="11" fill="#FFC400">z</text>
+    <text class="z3" x="84" y="12" font-family="Arial, sans-serif" font-weight="bold" font-size="8" fill="#FF9100">z</text>
+  </g>
+</svg>
