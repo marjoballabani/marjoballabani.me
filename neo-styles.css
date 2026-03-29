@@ -3460,6 +3460,37 @@ body[data-theme="dark"] .language-item:hover {
   box-shadow: 2px 2px 0 var(--border);
 }
 
+.creator-projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.creator-item {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  text-align: center;
+  gap: 0;
+}
+
+.creator-item .creator-project {
+  width: 100%;
+  justify-content: center;
+  height: 100px;
+}
+
+.creator-item .creator-tagline {
+  align-self: start;
+  min-height: 3.2em;
+}
+
+.creator-item .creator-github {
+  align-self: end;
+}
+
 /* Dark mode for projects */
 body[data-theme="dark"] .creator-project {
   background: #3a3a3a;
@@ -3489,6 +3520,12 @@ body[data-theme="dark"] .nav-lazyfire {
     gap: 0.5rem;
     padding: 0.75rem 1.25rem;
     box-shadow: 4px 4px 0 var(--border);
+  }
+
+  .creator-projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 340px;
   }
 
   .creator-name {
